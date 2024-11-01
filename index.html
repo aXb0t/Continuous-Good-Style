@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .color-samples {
+            display: flex;
+            gap: 10px;
+        }
+        .color-sample {
+            height: 50px;
+            width: 70px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .color-sample pre {
+            font-size: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main class="primary-content-wrapper">
+
+        <section>
+            <h2>About</h2>
+            <p>This is a sample HTML scaffolding.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+
+    <h3>color-samples</h3>
+    <div class="color-samples">
+        <div class="color-sample" style="background-color: var(--color-teal); color: white;">
+            <pre>#0C7B93<br />Teal</pre>
+        </div>
+        <div class="color-sample" style="background-color: var(--color-navy); color: white;">
+            <pre>#2D3258<br />Navy</pre>
+        </div>
+        <div class="color-sample" style="background-color: var(--color-text-gray); color: white;">
+            <pre>#696969<br />Text<br />Gray</pre>
+        </div>
+        <div class="color-sample" style="background-color: var(--color-background-gray); color: black;">
+            <pre>#F0F0F0<br />Background<br />Gray</pre>
+        </div>
+        <div class="color-sample" style="background-color: var(--color-red); color: white;">
+            <pre>#EB002F<br />Red</pre>
+        </div>
+        <div class="color-sample" style="background-color: var(--color-lightest-teal); color: black;">
+            <pre>#F5F7FA<br />Lightest<br />Teal</pre>
+        </div>
+    </div>
+
+
+</body>
+</html>
