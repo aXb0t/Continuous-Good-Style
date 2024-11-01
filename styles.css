@@ -57,13 +57,83 @@ body {
     line-height: 28px;
 }
 
+.intro {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--color-teal);
+    line-height: normal;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--color-text-gray);
+    line-height: 32px;
+}
+
+/* Button Styles */
+/* Common Button Styles */
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    background-color: var(--color-red);
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid var(--color-red);
+    transition: background-color 0.3s, color 0.3s, cursor 0.3s;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #FFFFFF;
+    color: var(--color-red);
+    cursor: pointer;
+}
+
+/* Large Button Styles */
+.button-large {
+    font-size: 24px;
+    height: 70px;
+    width: 342px;
+    padding: 26px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-large span {
+    display: inline-block;
+    min-width: 342px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Standard Button Styles */
+.button-standard {
+    font-size: 20px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 /* dev utils */
+
+.button-spacing .button-wrapper {
+    margin: 20px 0;
+}
+
 .color-samples {
     display: flex;
     gap: 10px;
 }
+
 .color-sample {
     height: 50px;
     width: 70px;
