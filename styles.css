@@ -1,1 +1,84 @@
 @import url('./normalize.css');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+body {
+    --color-teal: #0C7B93;
+    --color-navy: #2D3258;
+    --color-text-gray: #696969;
+    --color-background-gray: #F0F0F0;
+    --color-red: #EB002F;
+    --color-lightest-teal: #F5F7FA;
+}
+
+
+/* Heading Styles */
+.wysiwyg-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.wysiwyg-h2 {
+    font-size: 48px;
+    color: var(--color-navy);
+    line-height: 60px;
+}
+
+.wysiwyg-h3 {
+    font-size: 40px;
+    color: var(--color-teal);
+    line-height: 50px;
+}
+
+.wysiwyg-h4 {
+    font-size: 32px;
+    color: var(--color-text-gray);
+    line-height: 42px;
+}
+
+.wysiwyg-h5 {
+    font-size: 24px;
+    color: var(--color-navy);
+    line-height: 30px;
+}
+
+.wysiwyg-h6 {
+    font-size: 22px;
+    color: var(--color-teal);
+    line-height: 28px;
+}
+
+
+
+/* dev utils */
+.color-samples {
+    display: flex;
+    gap: 10px;
+}
+.color-sample {
+    height: 50px;
+    width: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.color-sample pre {
+    font-size: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    align-self: flex-start;
+}
