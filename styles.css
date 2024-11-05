@@ -180,7 +180,7 @@ p {
     min-height:115px;
   }
   
-  .angle-bg {
+  .angle {
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="white"/></svg>');
       --element-width: 10%;
       background-size: var(--element-width);
@@ -189,50 +189,67 @@ p {
       /* Position background on bottom left corner */
   }
 
-  .angle-bg.blue {
+  .angle.blue {
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="blue"/></svg>');
   }
 
-  .angle-bg.red {
+  .angle.red {
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="red"/></svg>');
   }
 
-  .angle-bg.green {
+  .angle.green {
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="green"/></svg>');
   }
 
-  .angle-bg.gray {
+  .angle.gray {
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(120,120,120)"/></svg>');
   }
 
-  .angle-bg.navy {
+  .angle.navy {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(45, 50, 88)"/></svg>');
   }
 
-  
-  /* Pitch */
-  
-  #pitch {
-    background-color: rgba(220,220,0,.3);
-  }
-  #pitch .container section {
-    background-color: rgba(60,60,0,.3);
+  .angle.white {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(255, 255, 255)"/></svg>');
   }
   
-  /* Services */
-  #services {
-    background-color: rgba(220,0,0,.3);
-  }
-  #services .container section {
-    background-color: rgba(60,0,0,.3);
-  }
 
-.teally {
+
+/* Section backgrounds */
+.plain {
+    background-color: #fff;
+}
+
+.teal-bg {
     background-color: var(--color-teal);
 }
 
-.teally p, .teally h2 {
+.teal-bg p, .teal-bg h2 {
     color: #fff;
+}
+
+.navy-bg {
+    background-color: var(--color-navy);
+}
+
+.navy-bg p, .navy-bg h2 {
+    color: #fff;
+}
+
+:root {
+    --gradient-percentage-white: auto;
+    --gradient-percentage-gray: 250px;
+}
+
+.bicolor {
+    /* background: linear-gradient(to bottom, #fff var(--gradient-percentage-white), #999 var(--gradient-percentage-gray)); */
+    background: linear-gradient(0deg, #eee 100px, #fff 0);
+}
+
+@media (max-width: 768px) {
+    .bicolor.vert {
+        background: linear-gradient(90deg, #eee 160px, #fff 0);   
+    }
 }
 
 /* Footer */
