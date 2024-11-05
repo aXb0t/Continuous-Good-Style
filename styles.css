@@ -97,34 +97,41 @@ div.container {
 }
 
 /* vars for bg gradients */
-:root {
-    --gradient-percentage-white: 0;
-    --gradient-percentage-gray: 200px;
-}
+/* 
+    gradient values needed:
+    - gradient-point-white start
+    - gradient-point-white end
+    - gradient-point-gray start
+    - gradient-point-gray end
+    and for vertical gradients:
+    - gradient-point-white-vert start
+    - gradient-point-white-vert end
+    - gradient-point-gray-vert start
+    - gradient-point-gray-vert end
+    each of these gradient start and end points
+    are customizable to the container's content, by class
+*/
 
-@media (max-width: 768px) {
-    :root {
-        --gradient-percentage-white: 0;
-        --gradient-percentage-gray: 150px;
-    }
+.bicolor {
+    --gradient-point-white: 0;
+    --gradient-point-gray: 200px;
 }
 
 .bicolor {
-    /* background: linear-gradient(to bottom, #fff var(--gradient-percentage-white), #999 var(--gradient-percentage-gray)); */
-    background: linear-gradient(0deg, #eee var(--gradient-percentage-gray), #fff var(--gradient-percentage-white));
+    /* background: linear-gradient(0deg, #eee var(--gradient-point-gray), #fff var(--gradient-point-white)); */
+    /* example use of start and stop points for gradient values */
+    background: linear-gradient(0deg, #e0e 0 50px, #0ff 50px 100px);
 }
 
 @media (max-width: 768px) {
+    .bicolor {
+        --gradient-point-white: 0;
+        --gradient-point-gray: 150px;
+    }
     .bicolor.vert {
-        /* background: linear-gradient(to bottom, #fff var(--gradient-percentage-white), #999 var(--gradient-percentage-gray)); */
-        background: linear-gradient(90deg, #eee var(--gradient-percentage-gray), #fff var(--gradient-percentage-white));
+        background: linear-gradient(90deg, #eee var(--gradient-point-gray), #fff var(--gradient-point-white));
     }
 }
-/* @media (max-width: 768px) {
-    .bicolor.vert {
-        background: linear-gradient(90deg, #eee 100px, #fff 0);
-    }
-} */
 
 /* Footer */
 .footer {
