@@ -19,6 +19,119 @@ body {
     --color-lightest-teal: #F5F7FA;
 }
 
+/* LAYOUT */
+/* responsive layout */
+.wrapper {
+    max-width: 80%;
+    min-width: 480px;
+    margin-inline: auto;
+    border: 1px solid black;
+    background-color: green;
+}
+
+div.wrap-row {
+    width: 100%;
+}
+
+
+div.container {
+    max-width: 80%;
+    margin-inline: auto;
+    /* border: 1px solid lime; */
+}
+
+.angle {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="white"/></svg>');
+    --element-width: 10%;
+    background-size: var(--element-width);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    /* Position background on bottom left corner */
+}
+
+.angle.blue {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="blue"/></svg>');
+}
+
+.angle.red {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="red"/></svg>');
+}
+
+.angle.green {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="green"/></svg>');
+}
+
+.angle.gray {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(120,120,120)"/></svg>');
+}
+
+.angle.navy {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(45, 50, 88)"/></svg>');
+}
+
+.angle.white {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(255, 255, 255)"/></svg>');
+}
+
+/* Section backgrounds */
+.plain {
+    background-color: #fff;
+}
+
+.teal-bg {
+    background-color: var(--color-teal);
+}
+
+.teal-bg p,
+.teal-bg h2 {
+    color: #fff;
+}
+
+.navy-bg {
+    background-color: var(--color-navy);
+}
+
+.navy-bg p,
+.navy-bg h2 {
+    color: #fff;
+}
+
+/* vars for bg gradients */
+:root {
+    --gradient-percentage-white: 0;
+    --gradient-percentage-gray: 200px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --gradient-percentage-white: 0;
+        --gradient-percentage-gray: 150px;
+    }
+}
+
+.bicolor {
+    /* background: linear-gradient(to bottom, #fff var(--gradient-percentage-white), #999 var(--gradient-percentage-gray)); */
+    background: linear-gradient(0deg, #eee var(--gradient-percentage-gray), #fff var(--gradient-percentage-white));
+}
+
+@media (max-width: 768px) {
+    .bicolor.vert {
+        /* background: linear-gradient(to bottom, #fff var(--gradient-percentage-white), #999 var(--gradient-percentage-gray)); */
+        background: linear-gradient(90deg, #eee var(--gradient-percentage-gray), #fff var(--gradient-percentage-white));
+    }
+}
+/* @media (max-width: 768px) {
+    .bicolor.vert {
+        background: linear-gradient(90deg, #eee 100px, #fff 0);
+    }
+} */
+
+/* Footer */
+.footer {
+    /* background-color: rgba(var(--color-navy), .3); */
+    background-color: var(--color-navy);
+}
+
 
 /* Heading Styles */
 .wysiwyg-heading {
@@ -122,7 +235,6 @@ p {
 }
 
 
-
 /* dev utils */
 
 .button-spacing .button-wrapper {
@@ -146,116 +258,10 @@ p {
     text-align: center;
     overflow: hidden;
 }
+
 .color-sample pre {
     font-size: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
     align-self: flex-start;
 }
-
-/* responsive layout */
-
-
-.wrapper {
-    max-width: 80%;
-    min-width: 480px;
-    margin-inline: auto;
-    border: 1px solid black;
-    background-color: green;
-  }
-  
-  div.wrap-row {
-    width: 100%;
-  }
-  
-  
-  div.container {
-    max-width: 80%;
-    margin-inline: auto;
-    /* border: 1px solid lime; */
-  }
-  
-  /* Header */
-  header {
-    min-height:115px;
-  }
-  
-  .angle {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="white"/></svg>');
-      --element-width: 10%;
-      background-size: var(--element-width);
-      background-repeat: no-repeat;
-      background-position: bottom left;
-      /* Position background on bottom left corner */
-  }
-
-  .angle.blue {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="blue"/></svg>');
-  }
-
-  .angle.red {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="red"/></svg>');
-  }
-
-  .angle.green {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="green"/></svg>');
-  }
-
-  .angle.gray {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(120,120,120)"/></svg>');
-  }
-
-  .angle.navy {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(45, 50, 88)"/></svg>');
-  }
-
-  .angle.white {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(255, 255, 255)"/></svg>');
-  }
-  
-
-
-/* Section backgrounds */
-.plain {
-    background-color: #fff;
-}
-
-.teal-bg {
-    background-color: var(--color-teal);
-}
-
-.teal-bg p, .teal-bg h2 {
-    color: #fff;
-}
-
-.navy-bg {
-    background-color: var(--color-navy);
-}
-
-.navy-bg p, .navy-bg h2 {
-    color: #fff;
-}
-
-:root {
-    --gradient-percentage-white: auto;
-    --gradient-percentage-gray: 250px;
-}
-
-.bicolor {
-    /* background: linear-gradient(to bottom, #fff var(--gradient-percentage-white), #999 var(--gradient-percentage-gray)); */
-    background: linear-gradient(0deg, #eee 100px, #fff 0);
-}
-
-@media (max-width: 768px) {
-    .bicolor.vert {
-        background: linear-gradient(90deg, #eee 160px, #fff 0);   
-    }
-}
-
-/* Footer */
-.footer {
-    /* background-color: rgba(var(--color-navy), .3); */
-    background-color: var(--color-navy);
-}
-
-  
