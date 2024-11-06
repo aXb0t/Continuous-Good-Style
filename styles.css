@@ -17,6 +17,8 @@ body {
     --color-background-gray: #F0F0F0;
     --color-red: #EB002F;
     --color-lightest-teal: #F5F7FA;
+    --gradient-color1: #e0e;
+    --gradient-color2: #0ff;
 }
 
 /* LAYOUT */
@@ -96,40 +98,54 @@ div.container {
     color: #fff;
 }
 
-/* vars for bg gradients */
-/* 
-    gradient values needed:
-    - gradient-point-white start
-    - gradient-point-white end
-    - gradient-point-gray start
-    - gradient-point-gray end
-    and for vertical gradients:
-    - gradient-point-white-vert start
-    - gradient-point-white-vert end
-    - gradient-point-gray-vert start
-    - gradient-point-gray-vert end
-    each of these gradient start and end points
-    are customizable to the container's content, by class
-*/
-
+/* Bicolor gradient sections */
 .bicolor {
-    --gradient-point-white: 0;
-    --gradient-point-gray: 200px;
+    --gradient-color1: #eee;
+    --gradient-color2: #fff;
+    --gradient-color1-start: 0;
+    --gradient-color1-end: 50px;
+    --gradient-color2-start: 50px;
+    --gradient-color2-end: 100px;
+    background: linear-gradient(
+        0deg, 
+        var(--gradient-color1) var(--gradient-color1-start) var(--gradient-color1-end), 
+        var(--gradient-color2) var(--gradient-color2-start) var(--gradient-color2-end)
+    );
 }
 
-.bicolor {
-    /* background: linear-gradient(0deg, #eee var(--gradient-point-gray), #fff var(--gradient-point-white)); */
-    /* example use of start and stop points for gradient values */
-    background: linear-gradient(0deg, #e0e 0 50px, #0ff 50px 100px);
+.bicolor.tall {
+    --gradient-color1: #eee;
+    --gradient-color2: #f0f;
+    --gradient-color1-start: 0;
+    --gradient-color1-end: 50px;
+    --gradient-color2-start: 50px;
+    --gradient-color2-end: 100px;
+}
+
+.bicolor.vert {
+    --gradient-vert-color2-start: 0;
+    --gradient-vert-color2-end: 350px;
+    --gradient-vert-color1-start: 350px;
+    --gradient-vert-color1-end: 0;
+    background: linear-gradient(
+        90deg, 
+        var(--gradient-color1) var(--gradient-vert-color1-start) var(--gradient-vert-color1-end), 
+        var(--gradient-color2) var(--gradient-vert-color2-start) var(--gradient-vert-color2-end)
+    );
 }
 
 @media (max-width: 768px) {
     .bicolor {
-        --gradient-point-white: 0;
-        --gradient-point-gray: 150px;
+        --gradient-color1-start: 0;
+        --gradient-color1-end: 150px;
+        --gradient-color2-start: 150px;
+        --gradient-color2-end: 300px;
     }
     .bicolor.vert {
-        background: linear-gradient(90deg, #eee var(--gradient-point-gray), #fff var(--gradient-point-white));
+        --gradient-vert-color2-start: 0;
+        --gradient-vert-color2-end: 150px;
+        --gradient-vert-color1-start: 150px;
+        --gradient-vert-color1-end: 0;
     }
 }
 
@@ -138,7 +154,6 @@ div.container {
     /* background-color: rgba(var(--color-navy), .3); */
     background-color: var(--color-navy);
 }
-
 
 /* Heading Styles */
 .wysiwyg-heading {
@@ -240,7 +255,6 @@ p {
     align-items: center;
     justify-content: center;
 }
-
 
 /* dev utils */
 
