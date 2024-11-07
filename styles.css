@@ -243,6 +243,12 @@ div.container {
         --gradient-color2-start: 150px;
         --gradient-color2-end: 300px;
     }
+    .bicolor.tall {
+        --gradient-color1-start: 0;
+        --gradient-color1-end: 550px;
+        --gradient-color2-start: 550px;
+        --gradient-color2-end: 0;
+    }
     .bicolor.vert {
         --gradient-vert-color2-start: 0;
         --gradient-vert-color2-end: 150px;
@@ -288,6 +294,9 @@ div.container {
 }
 
 @media (max-width: 768px) {
+    .ui-card:not(.active) {
+        display: none;
+    }
     .ui-card {
         flex: 1 1 100%;
     }
