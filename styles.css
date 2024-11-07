@@ -21,140 +21,6 @@ body {
     --gradient-color2: #0ff;
 }
 
-/* LAYOUT */
-/* responsive layout */
-.wrapper {
-    max-width: 80%;
-    min-width: 480px;
-    margin-inline: auto;
-    border: 1px solid black;
-    background-color: green;
-}
-
-div.wrap-row {
-    width: 100%;
-}
-
-
-div.container {
-    max-width: 80%;
-    margin-inline: auto;
-    /* border: 1px solid lime; */
-}
-
-.angle {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="white"/></svg>');
-    --element-width: 10%;
-    background-size: var(--element-width);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    /* Position background on bottom left corner */
-}
-
-.angle.blue {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="blue"/></svg>');
-}
-
-.angle.red {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="red"/></svg>');
-}
-
-.angle.green {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="green"/></svg>');
-}
-
-.angle.gray {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(120,120,120)"/></svg>');
-}
-
-.angle.navy {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(45, 50, 88)"/></svg>');
-}
-
-.angle.white {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(255, 255, 255)"/></svg>');
-}
-
-/* Section backgrounds */
-.plain {
-    background-color: #fff;
-}
-
-.teal-bg {
-    background-color: var(--color-teal);
-}
-
-.teal-bg p,
-.teal-bg h2 {
-    color: #fff;
-}
-
-.navy-bg {
-    background-color: var(--color-navy);
-}
-
-.navy-bg p,
-.navy-bg h2 {
-    color: #fff;
-}
-
-/* Bicolor gradient sections */
-.bicolor {
-    --gradient-color1: #eee;
-    --gradient-color2: #fff;
-    --gradient-color1-start: 0;
-    --gradient-color1-end: 50px;
-    --gradient-color2-start: 50px;
-    --gradient-color2-end: 100px;
-    background: linear-gradient(
-        0deg, 
-        var(--gradient-color1) var(--gradient-color1-start) var(--gradient-color1-end), 
-        var(--gradient-color2) var(--gradient-color2-start) var(--gradient-color2-end)
-    );
-}
-
-.bicolor.tall {
-    --gradient-color1: #eee;
-    --gradient-color2: #f0f;
-    --gradient-color1-start: 0;
-    --gradient-color1-end: 50px;
-    --gradient-color2-start: 50px;
-    --gradient-color2-end: 100px;
-}
-
-.bicolor.vert {
-    --gradient-vert-color2-start: 0;
-    --gradient-vert-color2-end: 350px;
-    --gradient-vert-color1-start: 350px;
-    --gradient-vert-color1-end: 0;
-    background: linear-gradient(
-        90deg, 
-        var(--gradient-color1) var(--gradient-vert-color1-start) var(--gradient-vert-color1-end), 
-        var(--gradient-color2) var(--gradient-vert-color2-start) var(--gradient-vert-color2-end)
-    );
-}
-
-@media (max-width: 768px) {
-    .bicolor {
-        --gradient-color1-start: 0;
-        --gradient-color1-end: 150px;
-        --gradient-color2-start: 150px;
-        --gradient-color2-end: 300px;
-    }
-    .bicolor.vert {
-        --gradient-vert-color2-start: 0;
-        --gradient-vert-color2-end: 150px;
-        --gradient-vert-color1-start: 150px;
-        --gradient-vert-color1-end: 0;
-    }
-}
-
-/* Footer */
-.footer {
-    /* background-color: rgba(var(--color-navy), .3); */
-    background-color: var(--color-navy);
-}
-
 /* Heading Styles */
 .wysiwyg-heading {
     font-family: 'Roboto', sans-serif;
@@ -255,6 +121,178 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+
+/* LAYOUT */
+/* responsive layout */
+.wrapper {
+    max-width: 80%;
+    min-width: 480px;
+    margin-inline: auto;
+    border: 1px solid black;
+    background-color: green;
+}
+
+div.wrap-row {
+    width: 100%;
+}
+
+
+div.container {
+    max-width: 80%;
+    margin-inline: auto;
+    /* border: 1px solid lime; */
+}
+
+.angle {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="white"/></svg>');
+    --element-width: 10%;
+    background-size: var(--element-width);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    /* Position background on bottom left corner */
+}
+
+.angle.blue {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="blue"/></svg>');
+}
+
+.angle.red {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="red"/></svg>');
+}
+
+.angle.green {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="green"/></svg>');
+}
+
+.angle.gray {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(120,120,120)"/></svg>');
+}
+
+.angle.navy {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(45, 50, 88)"/></svg>');
+}
+
+.angle.white {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(255, 255, 255)"/></svg>');
+}
+
+/* Section backgrounds */
+.plain {
+    background-color: #fff;
+}
+
+.teal-bg {
+    background-color: var(--color-teal);
+}
+
+.teal-bg p,
+.teal-bg h2 {
+    color: #fff;
+}
+
+.navy-bg {
+    background-color: var(--color-navy);
+}
+
+.navy-bg p,
+.navy-bg h2 {
+    color: #fff;
+}
+
+/* Bicolor gradient sections */
+.bicolor {
+    --gradient-color1: #eee;
+    --gradient-color2: #fff;
+    --gradient-color1-start: 0;
+    --gradient-color1-end: 50px;
+    --gradient-color2-start: 50px;
+    --gradient-color2-end: 100px;
+    background: linear-gradient(
+        0deg, 
+        var(--gradient-color1) var(--gradient-color1-start) var(--gradient-color1-end), 
+        var(--gradient-color2) var(--gradient-color2-start) var(--gradient-color2-end)
+    );
+}
+
+.bicolor.tall {
+    --gradient-color1: #eee;
+    --gradient-color2: #f0f;
+    --gradient-color1-start: 0;
+    --gradient-color1-end: 507px;
+    --gradient-color2-start: 507px;
+    --gradient-color2-end: 0;
+}
+
+.bicolor.vert {
+    --gradient-vert-color2-start: 0;
+    --gradient-vert-color2-end: 350px;
+    --gradient-vert-color1-start: 350px;
+    --gradient-vert-color1-end: 0;
+    background: linear-gradient(
+        90deg, 
+        var(--gradient-color1) var(--gradient-vert-color1-start) var(--gradient-vert-color1-end), 
+        var(--gradient-color2) var(--gradient-vert-color2-start) var(--gradient-vert-color2-end)
+    );
+}
+
+@media (max-width: 768px) {
+    .bicolor {
+        --gradient-color1-start: 0;
+        --gradient-color1-end: 150px;
+        --gradient-color2-start: 150px;
+        --gradient-color2-end: 300px;
+    }
+    .bicolor.vert {
+        --gradient-vert-color2-start: 0;
+        --gradient-vert-color2-end: 150px;
+        --gradient-vert-color1-start: 150px;
+        --gradient-vert-color1-end: 0;
+    }
+}
+
+/* Footer */
+.footer {
+    /* background-color: rgba(var(--color-navy), .3); */
+    background-color: var(--color-navy);
+}
+
+/* Temporary styles for a set of vertical or horizontal aligned cards */
+.ui-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ui-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: var(--color-lightest-teal);
+    border: 1px solid var(--color-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; /* Maintain square dimensions */
+}
+
+.ui-card h3,
+.ui-card p {
+    margin: 10px 0;
+    text-align: center;
+}
+.ui-card p {
+    padding: 0 20px;
+}
+
+.ui-card {
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .ui-card {
+        flex: 1 1 100%;
+    }
+}
+
 
 /* dev utils */
 
