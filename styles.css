@@ -268,10 +268,10 @@ header {
   }
   
   header h1#logo {
-    background-image: url('../images/rspnsv-dsgn.png');
+    background-image: url('../images/continuous-good.png');
     background-size: contain;
     height: 100px; /* Adjust height as needed */
-    width: 100%; /* Full width */
+    width: 50%; /* Full width */
     background-repeat: no-repeat;
     color: transparent; /* Hides the text */
   }
@@ -375,7 +375,41 @@ header {
     top: 0;
   }
   
-/* Footer */
+/* 48em = 768px */
+/* non-hidden menu on larger displays */
+@media (min-width: 48em) {
+
+  .header .menu {
+    clear: both;
+    max-height: 100%;
+    position: inherit;
+  }
+
+  header nav ul.menu {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    background: transparent;
+  }
+
+  header nav li {
+    margin: 0 15px; /* Space between nav items */
+  }
+
+  header nav li a {
+    font-size: 1.563rem; /* 25px in relative terms */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Transform text to uppercase */
+    text-decoration: none; /* No text decoration */
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
+  /* Footer */
 .footer {
     /* background-color: rgba(var(--color-navy), .3); */
     background-color: var(--color-navy);
