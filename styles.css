@@ -301,6 +301,11 @@ header h1#logo {
     text-decoration: none;
     color: black;
     border: 1px solid var(--color-navy);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--color-text-gray);
 }
 
 .header .menu li a:hover,
@@ -379,26 +384,28 @@ header h1#logo {
 /* 48em = 768px */
 /* non-hidden menu on larger displays */
 @media (min-width: 48em) {
-
-  .header .menu {
+/* probably odd conflicts with small displays */
+  .header ul.menu {
     clear: both;
     max-height: 100%;
     position: inherit;
+    background-color: turquoise;
   }
 
   header nav ul.menu {
     display: flex;
-    justify-content: center; /* Center the nav items */
-    list-style: none; /* Remove default list styles */
-    padding: 0; /* Remove padding */
+    align-items: center;
+    justify-content: right;
+    list-style: none;
+    padding: 0;
     background: transparent;
   }
 
-  header nav li {
+  header nav ul.menu li {
     margin: 0 15px; /* Space between nav items */
   }
 
-  header nav li a {
+  header nav ul.menu li a {
     font-size: 1.563rem; /* 25px in relative terms */
     color: white;
     font-weight: bold;
