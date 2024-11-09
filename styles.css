@@ -122,7 +122,6 @@ p {
     justify-content: center;
 }
 
-
 /* LAYOUT */
 /* responsive layout */
 .wrapper {
@@ -257,7 +256,6 @@ div.container {
     }
 }
 
-
 /* Header */
 header {
     border: 1px solid red;
@@ -265,49 +263,53 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-  }
-  
-  header h1#logo {
+    max-height: 115px;
+}
+
+header h1#logo {
     background-image: url('../images/continuous-good.png');
     background-size: contain;
-    height: 100px; /* Adjust height as needed */
-    width: 50%; /* Full width */
+    height: 100px;
+    /* Adjust height as needed */
+    width: 50%;
+    /* Full width */
     background-repeat: no-repeat;
-    color: transparent; /* Hides the text */
-  }
-  
-  .header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color: #fff;
-  }
-  
-  .header li a {
-    display: block;
-    padding: 20px 20px;
-    text-decoration: none;
-  }
-  
-  .header li a:hover,
-  .header .menu-btn:hover {
-    background-color: #f4f4f4;
-  }
-  
+    color: transparent;
+    /* Hides the text */
+}
+
+.header nav {
+    border: 1px solid fuchsia;
+}
   /* menu */
-  
-  .header .menu {
+.header .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
     position: fixed;
     top: 100px;
-  }
-  
-  /* Try CSS Burger Menu Test */
-  
-  .header .menu-icon {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #f0f;
+}
+
+.header .menu li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid var(--color-navy);
+}
+
+.header .menu li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+/* Try CSS Burger Menu Test */
+.header .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -315,19 +317,19 @@ header {
     padding: 28px 20px;
     position: relative;
     user-select: none;
-  }
-  
-  .header .menu-icon .navicon {
+}
+
+.header .menu-icon .navicon {
     background: #FF0;
     display: block;
     height: 2px;
     position: relative;
     transition: background .2s ease-out;
     width: 18px;
-  }
-  
-  .header .menu-icon .navicon:before,
-  .header .menu-icon .navicon:after {
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
     background: #F00;
     content: '';
     display: block;
@@ -335,46 +337,45 @@ header {
     position: absolute;
     transition: all .2s ease-out;
     width: 100%;
-  }
-  
-  .header .menu-icon .navicon:before {
+}
+
+.header .menu-icon .navicon:before {
     top: 5px;
-  }
-  
-  .header .menu-icon .navicon:after {
+}
+
+.header .menu-icon .navicon:after {
     top: -5px;
-  }
-  
-  /* menu btn */
-  
-  .header .menu-btn {
+}
+
+/* menu btn */
+.header .menu-btn {
     display: none;
-  }
-  
-  /* header menu button checked does stuff */
-  .header .menu-btn:checked ~ .menu {
+}
+
+/* header menu button checked does stuff */
+.header .menu-btn:checked~.menu {
     max-height: 240px;
     position: fixed;
     top: 100px;
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon .navicon {
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
     background: transparent;
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
     transform: rotate(-45deg);
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
     transform: rotate(45deg);
-  }
-  
-  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
     top: 0;
-  }
-  
+}
+
 /* 48em = 768px */
 /* non-hidden menu on larger displays */
 @media (min-width: 48em) {
