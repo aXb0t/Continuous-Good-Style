@@ -292,7 +292,6 @@ header h1#logo {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color: #f0f;
 }
 
 .header .menu li a {
@@ -359,9 +358,15 @@ header h1#logo {
 
 /* header menu button checked does stuff */
 .header .menu-btn:checked~.menu {
+/* temp working directly on the menu in checked state */
+/* .header .menu { */
     max-height: 240px;
-    position: fixed;
-    top: 100px;
+    width: 80%;
+    margin-inline: auto;
+    margin-left: 10%;
+    left: 0;
+    background-color: yellow;
+    border: 1px dotted red;
 }
 
 .header .menu-btn:checked~.menu-icon .navicon {
