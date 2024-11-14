@@ -295,9 +295,10 @@ header h1#logo {
     overflow: hidden;
 }
 
+/* need to split this from mobile break */
 .header .menu li a {
     display: block;
-    padding: 20px 20px;
+    padding: 20px 0;
     text-decoration: none;
     color: black;
     border: 1px solid var(--color-navy);
@@ -429,7 +430,7 @@ header h1#logo {
         list-style: none;
         padding: 0;
         background: transparent;
-        border: 1px solid aqua;
+        border: 1px solid lime;
         position: inherit;
         max-height: 100%;
         clear: both;
@@ -437,9 +438,11 @@ header h1#logo {
 
     header nav ul.menu li {
         margin: 0 15px; /* Space between nav items */
+        padding: 0;
     }
 
-    header nav ul.menu li a {
+    header .menu li a {
+        padding: 0;
         font-size: 1.563rem; /* 25px in relative terms */
         color: white;
         font-weight: bold;
@@ -451,6 +454,7 @@ header h1#logo {
         display: none;
     }
 }
+
 /* footer what? */
 .footer {
     /* background-color: rgba(var(--color-navy), .3); */
