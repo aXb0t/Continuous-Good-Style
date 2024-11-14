@@ -260,10 +260,29 @@ div.container {
 header {
     border: 1px solid red;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     max-height: 115px;
+}
+
+header h1 {
+    flex: 0 0 30%;
+}
+
+header nav {
+    flex: 0 0 70%;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        flex: 0 0 70%;
+    }
+
+    header nav {
+        flex: 0 0 30%;
+    }
 }
 
 header h1#logo {
@@ -271,7 +290,7 @@ header h1#logo {
     background-size: contain;
     height: 100px;
     /* Adjust height as needed */
-    width: 50%;
+    width: 70%;
     /* Full width */
     background-repeat: no-repeat;
     color: transparent;
@@ -362,7 +381,6 @@ header h1#logo {
 /* .header .menu { */
     max-height: 240px;
     width: 80%;
-    margin-inline: auto;
     margin-left: 10%;
     left: 0;
     background-color: yellow;
