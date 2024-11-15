@@ -1,0 +1,113 @@
+@media (max-width: 768px) {
+    header {
+        h1 {
+
+            flex: 0 0 70%;
+        }
+
+        nav {
+            flex: 0 0 30%;
+        }
+    }
+
+    .header #logo {
+        height: 115px;
+        width: 70%;
+        border: 1px solid yellow;
+    }
+
+    /* mobile menu */
+    .header .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        position: fixed;
+        top: 115px;
+        list-style: none;
+        overflow: hidden;
+        background-color: var(--color-navy);
+        color: white;
+        border: 1px dotted aqua;
+    }
+
+    .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    border: 1px solid blue;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #FF0;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #F00;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+    .header .menu-btn:checked~.menu {
+        max-height: 240px;
+        width: 80%;
+        margin-left: 10%;
+        left: 0;
+    }
+
+    /* css magic makes the hamburger menu work */
+    .header .menu-btn:checked~.menu-icon .navicon {
+        background: transparent;
+    }
+
+    .header .menu-btn:checked~.menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+
+    .header .menu-btn:checked~.menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+
+    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+
+    .header nav .menu li {
+        margin: 0 15px;
+        padding: 0;
+    }
+
+    .header .menu li a {
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: var(--color-text-gray);
+        border: 1px solid var(--color-navy);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 1.563rem;
+        /* 25px in relative terms */
+        text-transform: uppercase;
+    }
+
+}

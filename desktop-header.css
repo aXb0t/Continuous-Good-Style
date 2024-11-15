@@ -1,0 +1,51 @@
+@media (min-width: 48em) {
+    header {
+        h1 {
+
+            flex: 0 0 30%;
+        }
+
+        nav {
+            flex: 0 0 70%;
+        }
+    }
+
+    .header #logo {
+        height: 115px;
+        width: 70%;
+        border: 1px solid aqua;
+    }
+
+    /* desktop menu */
+    .header .menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0;
+        background: transparent;
+        border: 1px solid red;
+        position: inherit;
+        max-height: 100%;
+        clear: both;
+    }
+
+    .header nav .menu li {
+        margin: 0 15px;
+        /* Space between nav items */
+        padding: 0;
+    }
+
+    .header .menu li a {
+        display: block;
+        padding: 20px; 
+        text-decoration: none;
+        color: var(--color-text-gray);
+        border: 1px solid var(--color-navy);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 1.563rem; /* 25px in relative terms */
+        text-transform: uppercase;
+    }
+
+}

@@ -1,4 +1,7 @@
 @import url('./normalize.css');
+@import url('./header.css');
+@import url('./mobile-header.css');
+@import url('./desktop-header.css');
 
 /* CSS Reset */
 * {
@@ -207,11 +210,9 @@ div.container {
     --gradient-color1-end: 50px;
     --gradient-color2-start: 50px;
     --gradient-color2-end: 100px;
-    background: linear-gradient(
-        0deg, 
-        var(--gradient-color1) var(--gradient-color1-start) var(--gradient-color1-end), 
-        var(--gradient-color2) var(--gradient-color2-start) var(--gradient-color2-end)
-    );
+    background: linear-gradient(0deg,
+            var(--gradient-color1) var(--gradient-color1-start) var(--gradient-color1-end),
+            var(--gradient-color2) var(--gradient-color2-start) var(--gradient-color2-end));
 }
 
 .bicolor.tall {
@@ -228,11 +229,9 @@ div.container {
     --gradient-vert-color2-end: 350px;
     --gradient-vert-color1-start: 350px;
     --gradient-vert-color1-end: 0;
-    background: linear-gradient(
-        90deg, 
-        var(--gradient-color1) var(--gradient-vert-color1-start) var(--gradient-vert-color1-end), 
-        var(--gradient-color2) var(--gradient-vert-color2-start) var(--gradient-vert-color2-end)
-    );
+    background: linear-gradient(90deg,
+            var(--gradient-color1) var(--gradient-vert-color1-start) var(--gradient-vert-color1-end),
+            var(--gradient-color2) var(--gradient-vert-color2-start) var(--gradient-vert-color2-end));
 }
 
 @media (max-width: 768px) {
@@ -242,12 +241,14 @@ div.container {
         --gradient-color2-start: 150px;
         --gradient-color2-end: 300px;
     }
+
     .bicolor.tall {
         --gradient-color1-start: 0;
         --gradient-color1-end: 550px;
         --gradient-color2-start: 550px;
         --gradient-color2-end: 0;
     }
+
     .bicolor.vert {
         --gradient-vert-color2-start: 0;
         --gradient-vert-color2-end: 150px;
@@ -256,204 +257,7 @@ div.container {
     }
 }
 
-/* Header */
-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    max-height: 115px;
-    h1 {
-        flex: 0 0 30%;
-    }
-    nav {
-        flex: 0 0 70%;
-    }
-}
 
-header h1#logo {
-    background-image: url('../images/continuous-good.png');
-    background-size: contain;
-    height: 100px;
-    width: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: transparent;
-}
-
-/* menu */
-.header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    position: fixed;
-    top: 100px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-}
-
-/* need to split this from mobile break */
-.header .menu li a {
-    display: block;
-    padding: 20px 0;
-    text-decoration: none;
-    color: black;
-    border: 1px solid var(--color-navy);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: var(--color-text-gray);
-}
-
-.header .menu li a:hover,
-.header .menu-btn:hover {
-    background-color: #f4f4f4;
-}
-
-/* Try CSS Burger Menu Test */
-.header .menu-icon {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    border: 1px solid blue;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-
-.header .menu-icon .navicon {
-    background: #FF0;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-    background: #F00;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-    top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-    top: -5px;
-}
-
-/* menu btn */
-.header .menu-btn {
-    display: none;
-}
-
-/* header menu button checked does stuff */
-.header .menu-btn:checked~.menu {
-    max-height: 240px;
-    width: 80%;
-    margin-left: 10%;
-    left: 0;
-    background-color: yellow;
-    border: 1px dotted red;
-}
-
-.header .menu-btn:checked~.menu-icon .navicon {
-    background: transparent;
-}
-
-.header .menu-btn:checked~.menu-icon .navicon:before {
-    transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked~.menu-icon .navicon:after {
-    transform: rotate(45deg);
-}
-
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
-    top: 0;
-}
-
-/* Breakpoints */
-@media (max-width: 768px) {
-    header h1 {
-        flex: 0 0 70%;
-    }
-
-    header nav {
-        flex: 0 0 30%;
-    }
-
-    .header .menu-btn:checked~.menu {
-        max-height: 240px;
-        width: 80%;
-        margin-left: 10%;
-        left: 0;
-        background-color: yellow;
-        border: 1px dotted red;
-    }
-
-    .header .menu-btn:checked~.menu-icon .navicon {
-        background: transparent;
-    }
-
-    .header .menu-btn:checked~.menu-icon .navicon:before {
-        transform: rotate(-45deg);
-    }
-
-    .header .menu-btn:checked~.menu-icon .navicon:after {
-        transform: rotate(45deg);
-    }
-
-    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-    .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
-        top: 0;
-    }
-}
-/* for big screens */
-@media (min-width: 48em) {
-    .header ul.menu {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        list-style: none;
-        padding: 0;
-        background: transparent;
-        border: 1px solid lime;
-        position: inherit;
-        max-height: 100%;
-        clear: both;
-    }
-
-    header nav ul.menu li {
-        margin: 0 15px; /* Space between nav items */
-        padding: 0;
-    }
-
-    header .menu li a {
-        padding: 0;
-        font-size: 1.563rem; /* 25px in relative terms */
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase; /* Transform text to uppercase */
-        text-decoration: none; /* No text decoration */
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
-}
 
 /* footer what? */
 .footer {
@@ -475,7 +279,8 @@ header h1#logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1 / 1; /* Maintain square dimensions */
+    aspect-ratio: 1 / 1;
+    /* Maintain square dimensions */
 }
 
 .ui-card h3,
@@ -483,6 +288,7 @@ header h1#logo {
     margin: 10px 0;
     text-align: center;
 }
+
 .ui-card p {
     padding: 0 20px;
 }
@@ -495,6 +301,7 @@ header h1#logo {
     .ui-card:not(.active) {
         display: none;
     }
+
     .ui-card {
         flex: 1 1 100%;
     }
