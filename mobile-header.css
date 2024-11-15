@@ -16,57 +16,48 @@
         border: 1px solid yellow;
     }
 
-    /* mobile menu */
-    .header .menu {
-        clear: both;
-        max-height: 0;
-        transition: max-height .2s ease-out;
-        position: fixed;
-        top: 115px;
-        list-style: none;
-        overflow: hidden;
-        background-color: var(--color-navy);
-        color: white;
-        border: 1px dotted aqua;
+    .header nav .menu-label {
+        float: left;
+        color: black;
+    }
+    .header .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        border: 1px solid blue;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
     }
 
-    .header .menu-icon {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    border: 1px solid blue;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
+    .header .menu-icon .navicon {
+        background: lime;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }  
 
-.header .menu-icon .navicon {
-    background: #FF0;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
+    .header .menu-icon .navicon:before,
+    .header .menu-icon .navicon:after {
+        background: aqua;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
 
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-    background: #F00;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
+    .header .menu-icon .navicon:before {
+        top: 5px;
+    }
 
-.header .menu-icon .navicon:before {
-    top: 5px;
-}
+    .header .menu-icon .navicon:after {
+        top: -5px;
+    }
 
-.header .menu-icon .navicon:after {
-    top: -5px;
-}
     .header .menu-btn:checked~.menu {
         max-height: 240px;
         width: 80%;
@@ -92,7 +83,21 @@
         top: 0;
     }
 
-    .header nav .menu li {
+    /* mobile menu */
+    .header .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        position: fixed;
+        top: 115px;
+        list-style: none;
+        overflow: hidden;
+        background-color: var(--color-navy);
+        color: white;
+        border: 1px dotted aqua;
+    }
+
+    .header .menu li {
         margin: 0 15px;
         padding: 0;
     }

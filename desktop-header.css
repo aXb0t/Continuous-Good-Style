@@ -16,7 +16,6 @@
         border: 1px solid aqua;
     }
 
-    /* desktop menu */
     .header .menu {
         display: flex;
         align-items: center;
@@ -30,7 +29,7 @@
         clear: both;
     }
 
-    .header nav .menu li {
+    .header .menu li {
         margin: 0 15px;
         /* Space between nav items */
         padding: 0;
@@ -38,13 +37,14 @@
 
     .header .menu li a {
         display: block;
-        padding: 20px; 
+        padding: 20px;
         text-decoration: none;
         color: var(--color-text-gray);
         border: 1px solid var(--color-navy);
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
-        font-size: 1.563rem; /* 25px in relative terms */
+        font-size: 1.563rem;
+        /* 25px in relative terms */
         text-transform: uppercase;
     }
 
