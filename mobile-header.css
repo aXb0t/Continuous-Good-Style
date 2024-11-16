@@ -2,35 +2,53 @@
     header {
         h1 {
 
-            flex: 0 0 60%;
+            flex: 0 0 70%;
         }
 
         nav {
-            display: flex;
-            flex: 0 0 40%;
+            flex: 0 0 30%;
         }
     }
 
     .header #logo {
-        height: 115px;
+        height: 100px;
         width: 70%;
         border: 1px solid yellow;
+    }
+
+    .header nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0;
+        background: transparent;
+        border: 1px solid red;
+        position: inherit;
+        max-height: 100%;
+        clear: both;
     }
 
     .header nav .menu-label {
         color: white;
         text-transform: uppercase;
         font-weight: 900;
+        border: 1px solid red;
+        width: 50%;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        height: 100px;
+        padding: 20px 0;
+        text-align: center;
+        margin: 0 auto;
     }
 
-    .header .menu-icon {
+    .header nav .menu-icon {
+        float: right;
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 50%;
+        display: block;
         border: 1px solid aqua;
         padding: 28px 20px;
         position: relative;
