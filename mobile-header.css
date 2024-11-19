@@ -10,6 +10,7 @@
         }
     }
 
+    /* parent selector pseudo class */
     .container:has(> header.header) {
         max-width: 100%;
         margin: 0;
@@ -17,8 +18,8 @@
     
     .header #logo {
         height: 100px;
-        width: 70%;
-        border: 1px solid yellow;
+        background-size: 80%;
+    
     }
 
     .header nav {
@@ -28,10 +29,9 @@
         justify-content: flex-end;
         list-style: none;
         padding: 0;
-        background: transparent;
-        border: 1px solid red;
+        background: var(--color-navy);
         position: inherit;
-        max-height: 100%;
+        height: 115px;
         clear: both;
     }
 
@@ -45,7 +45,7 @@
         justify-content: center;
         align-items: center;
         height: 100px;
-        padding: 20px 0;
+        padding: 0 2rem;
         text-align: center;
         margin: 0 auto;
     }
@@ -55,14 +55,13 @@
         cursor: pointer;
         width: 50%;
         display: block;
-        border: 1px solid aqua;
         padding: 28px 20px;
         position: relative;
         user-select: none;
     }
 
     .header .menu-icon .navicon {
-        background: lime;
+        background: red;
         display: block;
         height: 2px;
         position: relative;
@@ -126,7 +125,6 @@
         overflow: hidden;
         background-color: var(--color-navy);
         color: white;
-        border: 1px dotted lime;
     }
 
     .header .menu li {
