@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 48em) {
     header {
         h1 {
 
@@ -10,6 +10,11 @@
         }
     }
 
+    .container:has(> header.header) {
+        max-width: 100%;
+        margin: 0;
+    }
+    
     .header #logo {
         height: 100px;
         width: 70%;
@@ -86,9 +91,10 @@
 
     .header .menu-btn:checked~.menu {
         max-height: 240px;
-        width: 80%;
-        margin-left: 10%;
-        left: 0;
+        width: 100%;
+        /* margin-left: 10%; */
+        /* left: 0; */
+        /* min-width: 320px; */
     }
 
     /* css magic makes the hamburger menu work */
@@ -120,7 +126,7 @@
         overflow: hidden;
         background-color: var(--color-navy);
         color: white;
-        border: 1px dotted aqua;
+        border: 1px dotted lime;
     }
 
     .header .menu li {

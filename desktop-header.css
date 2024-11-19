@@ -1,19 +1,20 @@
 @media (min-width: 48em) {
     header {
-        h1 {
+        display: flex;
+        justify-content: space-between;
+    }
 
-            flex: 0 0 30%;
-        }
+    header h1 {
+        flex: 0 0 30%;
+    }
 
-        nav {
-            flex: 0 0 70%;
-        }
+    header nav {
+        flex: 0 0 70%;
     }
 
     .header #logo {
         height: 115px;
         width: 70%;
-        border: 1px solid aqua;
     }
 
     /* hide the menu label on non mobile */
@@ -23,16 +24,11 @@
 
     .header .menu {
         display: flex;
-        align-items: right;
+        flex-flow: row wrap;
         justify-content: flex-end;
         list-style: none;
         padding: 0;
         background: transparent;
-        border: 1px solid blue;
-        position: inherit;
-        max-height: 100%;
-        clear: both;
-        float: right
     }
 
     .header .menu li {
