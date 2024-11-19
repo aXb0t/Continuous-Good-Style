@@ -16,36 +16,60 @@
         border: 1px solid aqua;
     }
 
+    /* hide the menu label on non mobile */
+    .header nav .menu-label {
+        display: none;
+    }
+
     .header .menu {
         display: flex;
-        align-items: center;
+        align-items: right;
         justify-content: flex-end;
         list-style: none;
         padding: 0;
         background: transparent;
-        border: 1px solid red;
+        border: 1px solid blue;
         position: inherit;
         max-height: 100%;
         clear: both;
+        float: right
     }
 
     .header .menu li {
         margin: 0 15px;
         /* Space between nav items */
         padding: 0;
+        background-color: aliceblue;
+    }
+
+    .header .menu li.active {
+        background: linear-gradient(45deg, var(--color-navy) 92%, white 92%);
     }
 
     .header .menu li a {
         display: block;
-        padding: 20px;
+        padding: 0.5rem 0.75rem; /* Further reduced padding top/bottom (8px) and right/left (12px) */
         text-decoration: none;
         color: var(--color-text-gray);
         border: 1px solid var(--color-navy);
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
-        font-size: 1.563rem;
-        /* 25px in relative terms */
+        font-size: 1rem; /* 16px in relative terms */
         text-transform: uppercase;
+    }
+
+    .header .menu li.active a {
+        color: white;
+    }
+
+    .header .menu li a:hover {
+        color: var(--color-navy);
+        background-color: var(--color-light-gray);
+    }
+
+    .header .menu li.active a:hover {
+        color: white;
+        background-color: inherit;
     }
 
 }
